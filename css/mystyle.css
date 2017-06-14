@@ -1,0 +1,31 @@
+h1 {
+	color: white;
+}
+
+img {
+/*	border-style: solid;
+	border-color: purple;
+	border-width: 1px;
+*/
+	border: 2px solid #cc99ff; 
+}
+
+body {
+	background-color: green;
+}
+
+.color-white {
+	color: #FFFFFF;
+}
+
+.color-red {
+	color: red;
+}
+
+.color-blue {
+	color: blue;
+}
+
+.margin-15 {
+	margin-left: 15px;
+}

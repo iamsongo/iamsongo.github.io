@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lulna's ZONE</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<style type="text/css">
+	     body { 
+	     	background-color: #400080; 
+	     }
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<h1 id="greeting" class="color-white">
+			Welcome to Lulna's ZONE <button type="button" width="500px" class="btn btn-danger btn-xs" id="btnreload">R</button>
+		</h1>
+		<div class="color-white"> 
+			<div class="row">
+				<div class="color-white col-md-2">
+					<button type="button" width="500px" class="btn btn-default btn-lg btn-block" id="btnprofile">ประวัติส่วนตัว</button>
+					<button type="button" width="200px" class="btn btn-default btn-lg btn-block" id="btnstudy">การศึกษา</button>
+					<button type="button" width="200px" class="btn btn-default btn-lg btn-block" id="btngallery">แกลลอรี่</button>
+				</div>
+
+				<div id="landing">
+					<div class="col-md-10">
+						<img class="img-circle" src="img/profile.jpg" width="200px" height="300px" style="border:2px dotted #ecb3ff;">
+						<br>
+						<br>
+						สวัสดีค่ะ หนูชื่อเด็กหญิงลัลลณา ค่ะ
+					</div>
+				</div>
+				
+				<div id="profile" class="hide">
+					<div class="col-md-10">
+						<img class="img-circle" src="img/born.jpg" width="200px" height="267px" style="border:2px dotted #ecb3ff;">
+						<br>
+						<br>
+						พ่อชื่อ สอง<br>
+						แม่ชื่อ ตา<br>
+						ย่าชื่อ ส่ง<br>
+						ปู่ชื่อ ต๋อง<br>
+						ป้าชื่อ ส้ม<br><br>
+
+						เกิดวันพฤหัสบดีที่ 27 กันยายน 2555 เวลา 09.51<br>
+						ณ โรงพยาบาลเมโย (ชื่อใหม่ โรงพยาบาลเปาโลเกษตร)
+
+					</div>
+				</div>
+
+				<div id="study" class="hide">
+					<div class="col-md-10">
+						<img class="img-circle" src="img/study.jpg" width="200px" height="200px" style="border:2px dotted #ecb3ff;">
+						<br>
+						<br>
+						ปัจจุบัน เรียนอยู่โรงเรียนสุดารักษ์ ชั้น อนุบาล 3/3 ห้องครูอ้อย
+						<br>
+						- เรียนเสริม ว่ายน้ำ สปอร์ตแดนซ์ 
+					</div>
+				</div>
+
+				<div id="gallery" class="hide">
+					<div class="col-md-10">
+							<img class="img-rounded" src="gallery/01.jpg" width="200px" style="border:2px dotted #ecb3ff;">
+							<img class="img-rounded" src="gallery/02.jpg" width="200px" style="border:2px dotted #ecb3ff;">
+							<img class="img-rounded" src="gallery/03.jpg" width="200px" style="border:2px dotted #ecb3ff;">
+							<img class="img-rounded" src="gallery/04.jpg" width="200px" style="border:2px dotted #ecb3ff;">
+							<img class="img-rounded" src="gallery/05.jpg" width="200px" style="border:2px dotted #ecb3ff;">
+							<img class="img-rounded" src="gallery/06.jpg" width="200px" style="border:2px dotted #ecb3ff;">
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	
+	<script>
+
+		//$("#btnprofile").css("width", "150px");
+		//$("#btnstudy").css("width", "150px");
+		//$("#btngallery").css("width", "150px");
+
+		$(document).ready(function(){
+		    $('#btnprofile').click(function() {
+		    	$("#profile").removeClass("hide");
+		    	$('#profile').show();
+		        $('#study').hide();
+		        $('#gallery').hide();
+		        $('#landing').hide();
+		        $("#btnprofile").removeClass("btn-default").addClass("btn-primary");
+		        $("#btnstudy").removeClass("btn-primary").addClass("btn-default");
+		        $("#btngallery").removeClass("btn-primary").addClass("btn-default");
+		    });
+
+		    $('#btnstudy').click(function() {
+		    	$("#study").removeClass("hide");
+		    	$('#profile').hide();
+		        $('#study').show();
+		        $('#gallery').hide();
+		        $('#landing').hide();
+		        $("#btnprofile").removeClass("btn-primary").addClass("btn-default");
+		        $("#btnstudy").removeClass("btn-default").addClass("btn-primary");
+		        $("#btngallery").removeClass("btn-primary").addClass("btn-default");
+		    });
+
+		    $('#btngallery').click(function() {
+		    	$("#gallery").removeClass("hide");
+		    	$('#profile').hide();
+		        $('#study').hide();
+		        $('#gallery').show();
+		        $('#landing').hide();
+		        $("#btnprofile").removeClass("btn-primary").addClass("btn-default");
+		        $("#btnstudy").removeClass("btn-primary").addClass("btn-default");
+		        $("#btngallery").removeClass("btn-default").addClass("btn-primary");
+			});
+
+		    $('#btnreload').click(function() {
+    			location.reload();
+		    });
+		});
+	</script>
+
+</body>
+</html>
